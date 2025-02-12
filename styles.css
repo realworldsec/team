@@ -1,0 +1,230 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #121212; /* Dark background for hacker vibe */
+    color: white;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Styles */
+header {
+    background-color: #000;
+    color: #0f0;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 255, 0, 0.5);
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 30px;
+}
+
+header nav ul li a {
+    font-size: 1.5em;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffcc00;
+    text-shadow: 0 0 15px #ffcc00, 0 0 25px #ffcc00;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://example.com/hacker-background.jpg') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+.hero-content h2 {
+    font-size: 4em;
+    color: #00ff00;
+    text-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
+    animation: typing 3s steps(30) 1s 1 normal both;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+/* About Section */
+.about {
+    padding: 60px 20px;
+    text-align: center;
+    background: #1a1a1a;
+}
+
+.about h2 {
+    font-size: 3em;
+    text-shadow: 0 0 15px #ffcc00, 0 0 25px #ffcc00;
+}
+
+.about p {
+    font-size: 1.2em;
+    color: #bbb;
+    margin-top: 20px;
+}
+
+/* Team Section */
+.team {
+    padding: 60px 20px;
+    background: #121212;
+    text-align: center;
+}
+
+.team h2 {
+    font-size: 3em;
+    color: #ffcc00;
+    text-shadow: 0 0 15px #ffcc00;
+    margin-bottom: 40px;
+}
+
+.profiles {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    flex-wrap: wrap;
+    animation: fadeIn 2s ease-out;
+}
+
+.profile-card {
+    background: #333;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 255, 0, 0.4);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.profile-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px #00ff00;
+}
+
+.profile-card h3 {
+    font-size: 1.5em;
+    color: #fff;
+    text-shadow: 0 0 15px #ffcc00;
+}
+
+.profile-card p {
+    font-size: 1.1em;
+    color: #bbb;
+}
+
+.profile-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 255, 0, 0.7);
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 20px;
+    background: #1a1a1a;
+    color: white;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 3em;
+    color: #00ff00;
+}
+
+.contact form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact input, .contact textarea {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 10px;
+    width: 60%;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.4);
+}
+
+.contact button {
+    background-color: #ffcc00;
+    color: #121212;
+    padding: 15px 30px;
+    border: none;
+    margin-top: 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #ff9933;
+}
+
+/* Footer */
+footer {
+    background-color: #0f0f0f;
+    color: #bbb;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -4px 15px rgba(0, 255, 0, 0.4);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profiles {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .profile-card {
+        width: 80%;
+    }
+}
